@@ -10,10 +10,9 @@ jobs:
   build-image:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: docker build
         run: |
-          pwd
-          ls -la
           docker build \
           --tag myalpine:latest \
           .      
