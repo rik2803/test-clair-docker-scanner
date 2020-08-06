@@ -23,8 +23,7 @@ jobs:
           docker run -p 6060:6060 --link db:postgres -d --name clair --restart on-failure arminc/clair-local-scan:v2.0.1
           sudo apt-get update
           sudo apt-get install -y wget ca-certificates || true
-          docker pull $CONTAINER_IMAGE:$CI_BUILD_REF
-          wget https://github.com/arminc/clair-scanner/releases/download/v8/clair-scanner_linux_amd64
+          wget https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
           mv clair-scanner_linux_amd64 clair-scanner
           chmod +x clair-scanner
           touch clair-whitelist.yml
