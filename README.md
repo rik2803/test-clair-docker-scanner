@@ -1,0 +1,1 @@
+# test-clair-docker-scanner
