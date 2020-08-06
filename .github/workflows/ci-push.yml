@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: docker build
         run: |
+          pwd
+          ls -la
           docker build \
           --tag myalpine:latest \
           .      
