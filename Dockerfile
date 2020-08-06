@@ -1,3 +1,3 @@
-FROM alpine
+FROM alpine:3.12.0
 
-ADD myfile /myfile
+COPY myfile /myfile
