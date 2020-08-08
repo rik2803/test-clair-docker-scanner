@@ -1,5 +1,11 @@
 name: ci-push
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - develop
 jobs:
   lint-dockerfile:
     runs-on: ubuntu-latest

@@ -3,6 +3,7 @@ on: [push]
 jobs:
   lint-dockerfile:
     runs-on: ubuntu-latest
+    if: github.ref == 'this-won-t-happen'
     steps:
       - uses: actions/checkout@v2
       - run: docker pull hadolint/hadolint
